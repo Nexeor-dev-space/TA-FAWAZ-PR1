@@ -1,4 +1,5 @@
 import styles from '../styles/Hero.module.css';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -11,6 +12,9 @@ const Hero = () => {
         <p className={styles.subtext}>
           Do i have consent to record this meeting gain location, root-and-branch, review, nor game plan who's the goto
         </p>
+        <Link href="/shop" className={styles.shopButton}>
+          Shop Now
+        </Link>
       </div>
     </div>
   );
