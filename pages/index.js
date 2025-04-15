@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import Services from '../components/Services';
 import { Saira } from 'next/font/google';
 
 const saira = Saira({ 
@@ -21,6 +22,7 @@ export default function Home() {
       <div className={`${styles.container} ${saira.className}`}>
         <Navbar />
         <Hero />
+        <Services />
       </div>
     </>
   );
