@@ -155,6 +155,113 @@
   z-index: 2;
 }
 
+.statsSection.mobile {
+  bottom: -80px;
+}
+
+.statsSection.mobile .stats {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.statsSection.mobile .statItem {
+  width: 100%;
+  padding: 0;
+}
+
+.statsSection.mobile .statDivider {
+  display: none;
+}
+
+.statsSection.mobile .statNumber {
+  font-size: 1.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.statsSection.mobile .statLabel {
+  font-size: 0.85rem;
+  max-width: none;
+}
+
+/* Tablet (iPad Air, iPad Pro 11") */
+@media (max-width: 1024px) {
+  .hero {
+    padding: 100px 0 100px;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
+  .subtext {
+    font-size: 1.05rem;
+    max-width: 500px;
+  }
+
+  .statsSection {
+    bottom: -150px;
+    width: calc(100% - 3rem);
+  }
+
+  .stats {
+    padding: 2.25rem;
+  }
+
+  .statNumber {
+    font-size: 2.25rem;
+  }
+
+  .statLabel {
+    font-size: 0.85rem;
+  }
+
+  .statDivider {
+    height: 60px;
+    margin: 0 1.5rem;
+  }
+}
+
+/* Tablet (iPad Mini) */
+@media (max-width: 834px) {
+  .hero {
+    padding: 90px 0 90px;
+  }
+
+  .heading {
+    font-size: 2.75rem;
+  }
+
+  .subtext {
+    font-size: 1rem;
+    max-width: 450px;
+  }
+
+  .statsSection {
+    bottom: -120px;
+    width: calc(100% - 2.5rem);
+  }
+
+  .stats {
+    padding: 2rem;
+  }
+
+  .statNumber {
+    font-size: 2rem;
+  }
+
+  .statLabel {
+    font-size: 0.8rem;
+  }
+
+  .statDivider {
+    height: 50px;
+    margin: 0 1.25rem;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .hero {
     min-height: 100vh;
@@ -169,35 +276,5 @@
   .subtext {
     font-size: 1rem;
     padding: 0 1rem;
-  }
-
-  .statsSection {
-    bottom: -80px;
-  }
-
-  .stats {
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-  }
-
-  .statItem {
-    width: 100%;
-    padding: 0;
-  }
-
-  .statDivider {
-    display: none;
-  }
-
-  .statNumber {
-    font-size: 1.75rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .statLabel {
-    font-size: 0.85rem;
-    max-width: none;
   }
 } 

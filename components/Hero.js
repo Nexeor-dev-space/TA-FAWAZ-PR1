@@ -1,8 +1,18 @@
 import styles from '../styles/Hero.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 
 const Hero = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <div className={styles.container}>
       <div className={styles.hero}>
@@ -30,7 +40,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className={styles.statsSection}>
+      <div className={`${styles.statsSection} ${isMobile ? styles.mobile : ''}`}>
         <div className={styles.stats}>
           <div className={styles.statItem}>
             <span className={styles.statNumber}>7</span>

@@ -48,6 +48,67 @@
   background-color: white;
 }
 
+.navLinks.mobile {
+  position: fixed;
+  left: -100%;
+  top: 70px;
+  gap: 0;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100%;
+  text-align: center;
+  transition: 0.3s;
+  padding: 2rem 0;
+}
+
+.navLinks.mobile.active {
+  left: 0;
+}
+
+.navLinks.mobile a {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+/* Tablet (iPad Air, iPad Pro 11") */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 1rem 3rem;
+  }
+
+  .logo a {
+    font-size: 1.4rem;
+  }
+
+  .navLinks {
+    gap: 1.5rem;
+  }
+
+  .navLinks a {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablet (iPad Mini) */
+@media (max-width: 834px) {
+  .navbar {
+    padding: 1rem 2.5rem;
+  }
+
+  .logo a {
+    font-size: 1.3rem;
+  }
+
+  .navLinks {
+    gap: 1.25rem;
+  }
+
+  .navLinks a {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile */
 @media (max-width: 768px) {
   .navbar {
     padding: 1rem 2rem;
@@ -67,27 +128,5 @@
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .navLinks {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    gap: 0;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-    padding: 2rem 0;
-  }
-
-  .navLinks.active {
-    left: 0;
-  }
-
-  .navLinks a {
-    margin: 1rem 0;
-    font-size: 1.2rem;
   }
 } 
