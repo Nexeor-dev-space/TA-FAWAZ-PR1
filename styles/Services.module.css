@@ -33,9 +33,9 @@
     display: block !important;
   }
   
-  .content {
-    /* padding-right: 2rem; */ /* Removed, padding handled by container/gap */
-  }
+  /* .content {
+    padding-right: 2rem; 
+  } */
   
   .title {
     font-size: 2.5rem;
