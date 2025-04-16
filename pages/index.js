@@ -1,7 +1,14 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Services from '../components/Services';
+import { Saira } from 'next/font/google';
+
+const saira = Saira({ 
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+});
 
 export default function Home() {
   return (
@@ -12,8 +19,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.container}>
+      <div className={`${styles.container} ${saira.className}`}>
         <Navbar />
+        <Hero />
+        <Services />
       </div>
     </>
   );

@@ -1,0 +1,280 @@
+.container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    padding: 120px 0 120px;
+  }
+  
+  .heroContent {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .imageLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 2rem;
+    z-index: 1;
+  }
+  
+  .heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .subtext {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    letter-spacing: 0.01em;
+  }
+  
+  .shopButton {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 0.875rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .shopButton:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .statsSection {
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: calc(100% - 4rem);
+    max-width: 1200px;
+    z-index: 3;
+  }
+  
+  .stats {
+    background: rgb(35, 116, 111);
+    border-radius: 20px;
+    padding: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .stats::before {
+    content: none;
+  }
+  
+  .stats::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(35, 116, 111);
+    opacity: 0.95;
+    z-index: 1;
+  }
+  
+  .statsContainer {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  .statItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .statNumber {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  
+  .statLabel {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 120px;
+    line-height: 1.4;
+  }
+  
+  .statDivider {
+    width: 1px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.15);
+    margin: 0 2rem;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .statsSection.mobile {
+    bottom: -80px;
+  }
+  
+  .statsSection.mobile .stats {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .statsSection.mobile .statItem {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .statsSection.mobile .statDivider {
+    display: none;
+  }
+  
+  .statsSection.mobile .statNumber {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .statsSection.mobile .statLabel {
+    font-size: 0.85rem;
+    max-width: none;
+  }
+  
+  /* Tablet (iPad Air, iPad Pro 11") */
+  @media (max-width: 1024px) {
+    .hero {
+      padding: 100px 0 100px;
+    }
+  
+    .heading {
+      font-size: 3rem;
+    }
+  
+    .subtext {
+      font-size: 1.05rem;
+      max-width: 500px;
+    }
+  
+    .statsSection {
+      bottom: -150px;
+      width: calc(100% - 3rem);
+    }
+  
+    .stats {
+      padding: 2.25rem;
+    }
+  
+    .statNumber {
+      font-size: 2.25rem;
+    }
+  
+    .statLabel {
+      font-size: 0.85rem;
+    }
+  
+    .statDivider {
+      height: 60px;
+      margin: 0 1.5rem;
+    }
+  }
+  
+  /* Tablet (iPad Mini) */
+  @media (max-width: 834px) {
+    .hero {
+      padding: 90px 0 90px;
+    }
+  
+    .heading {
+      font-size: 2.75rem;
+    }
+  
+    .subtext {
+      font-size: 1rem;
+      max-width: 450px;
+    }
+  
+    .statsSection {
+      bottom: -120px;
+      width: calc(100% - 2.5rem);
+    }
+  
+    .stats {
+      padding: 2rem;
+    }
+  
+    .statNumber {
+      font-size: 2rem;
+    }
+  
+    .statLabel {
+      font-size: 0.8rem;
+    }
+  
+    .statDivider {
+      height: 50px;
+      margin: 0 1.25rem;
+    }
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .hero {
+      min-height: 100vh;
+      align-items: flex-start;
+      padding: 100px 0 100px;
+    }
+  
+    .heading {
+      font-size: 2.5rem;
+    }
+  
+    .subtext {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+  } 
