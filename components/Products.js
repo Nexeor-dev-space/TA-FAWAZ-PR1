@@ -113,7 +113,7 @@ const Products = () => {
                   src={product.image}
                   alt={product.name}
                   fill
-                  className="object-contain"
+                  className="object-cover"
                   sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   priority
                 />
