@@ -89,7 +89,7 @@ const Products = () => {
   return (
     <section className={styles.products}>
       <div className={styles.header}>
-        <h2 className={styles.title}>All Products</h2>
+        <h2 className={styles.title}>All Product</h2>
         <p className={styles.subtitle}>
           The products we provide only for you as our service are selected from the
           best products with number 1 quality in the world
@@ -108,13 +108,16 @@ const Products = () => {
         {currentProducts.map((product) => (
           <div key={`${product.id}-${currentSlide}`} className={styles.productCard}>
             <div className={styles.imageContainer}>
-              <Image
-                src={product.image}
-                alt={product.name}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 33vw, 25vw"
-              />
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  priority
+                />
+              </div>
               <button className={styles.addButton} aria-label="Add to cart">
                 +
               </button>
