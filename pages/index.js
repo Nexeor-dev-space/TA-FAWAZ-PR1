@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Services from '../components/Services';
 import { Saira } from 'next/font/google';
+import NewItems from '../components/newitems';
 
 const saira = Saira({ 
   subsets: ['latin'],
@@ -23,6 +24,7 @@ export default function Home() {
         <Navbar />
         <Hero />
         <Services />
+        <NewItems />
       </div>
     </>
   );
