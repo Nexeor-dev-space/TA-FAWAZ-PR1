@@ -1,0 +1,220 @@
+.mail {
+  position: relative;
+  width: 100%;
+  min-height: 400px;
+  background-image: url('/mail.png');
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-color: #1a5f7a;
+  overflow: hidden;
+}
+
+.mail::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: linear-gradient(90deg, rgba(26, 95, 122, 0.9) 0%, rgba(26, 95, 122, 0.8) 50%, rgba(26, 95, 122, 0.7) 100%); */
+  z-index: 1;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  position: relative;
+  z-index: 2;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.content {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-left: auto;
+  padding-left: 2rem;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+  color: white;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.description {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: white;
+  min-width: 0;
+}
+
+.emailInput::placeholder {
+  color: #666;
+}
+
+.submitButton {
+  padding: 1rem 2rem;
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.submitButton:hover {
+  background: #333;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .container {
+    padding: 3rem 2rem;
+    justify-content: center;
+  }
+
+  .content {
+    margin: 0 auto;
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  .description {
+    text-align: center;
+  }
+
+  .inputGroup {
+    justify-content: center;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .mail {
+    min-height: 350px;
+    background-position: center;
+  }
+
+  .container {
+    padding: 3rem 1.5rem;
+  }
+
+  .content {
+    max-width: 400px;
+    gap: 1.25rem;
+  }
+
+  .title {
+    font-size: 2.25rem;
+  }
+
+  .subtitle {
+    font-size: 1.75rem;
+  }
+
+  .description {
+    font-size: 1.125rem;
+  }
+
+  .inputGroup {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .emailInput {
+    min-width: 200px;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .mail {
+    min-height: 300px;
+  }
+
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .content {
+    max-width: 280px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .inputGroup {
+    flex-direction: column;
+  }
+
+  .emailInput,
+  .submitButton {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+  }
+} 
