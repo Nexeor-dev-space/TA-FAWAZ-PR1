@@ -9,7 +9,6 @@ import About from '../components/About';
 import Products from '../components/Products';
 import Review from '../components/Review';
 import Mail from '../components/Mail';
-import Footer from '../components/Footer';
 
 const saira = Saira({ 
   subsets: ['latin'],
@@ -34,7 +33,6 @@ export default function Home() {
         <Products />
         <Review />
         <Mail />
-        <Footer />
       </div>
     </>
   );
