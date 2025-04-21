@@ -8,6 +8,7 @@ import NewItems from '../components/newitems';
 import About from '../components/About';
 import Products from '../components/Products';
 import Review from '../components/Review';
+import Mail from '../components/Mail';
 
 const saira = Saira({ 
   subsets: ['latin'],
@@ -31,6 +32,7 @@ export default function Home() {
         <About />
         <Products />
         <Review />
+        <Mail />
       </div>
     </>
   );
